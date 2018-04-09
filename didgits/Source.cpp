@@ -185,7 +185,7 @@ int main() // 9. page 127
 }
 */
 
-int main()
+int main() //10
 {
 	double div = 0;
 	string operation = "";
