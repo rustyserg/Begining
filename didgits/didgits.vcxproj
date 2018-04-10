@@ -23,6 +23,7 @@
     <ProjectGuid>{1FD94944-24AA-4CA7-BB3C-D76399CDB390}</ProjectGuid>
     <RootNamespace>didgits</RootNamespace>
     <WindowsTargetPlatformVersion>10.0.16299.0</WindowsTargetPlatformVersion>
+    <ProjectName>digits</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">

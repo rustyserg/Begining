@@ -59,7 +59,7 @@ int main()
 */
 
 /*
-int main()
+int main() //2 p.126 DONE
 {
 	double mile = 1.609;
 	double kilometer = 0;
@@ -70,77 +70,66 @@ int main()
 	return 0;
 }
 */
+
+//int main() // 4 p. 127 DONE
+//{
+//	double reminder = 0;
+//	double val1 = 0;
+//	double val2 = 0;
+//	double max = 0;
+//	double min = 0;
+//	cout << "Please, enter number 1 and number 2:\n";
+//	cin >> val1 >> val2;
+//	if (val1 > val2) {
+//		max = val1;
+//		min = val2;
+//	}	
+//	else {
+//		max = val2;
+//		min = val1;
+//	}	
+//	int tt = max / min;
+//	reminder = max - tt * min;
+//	cout << "The biggest number is: " << max << "\n";
+//	cout << "The smallest number is: " << min << "\n";
+//	cout << "The summ of the numbers is: " << val1+val2 << "\n";
+//	cout << "The difference between the numbers is: " << max - min << "\n";
+//	cout << "The remainder of two values: " << reminder << "\n";
+//	keep_window_open();
+//	return 0;
+//}
+
+//int main()  //5 p. 127
+//{
+//	int a, b, c = 0;
+//	bool sort_flag = false;
+//	cout << "Please, enter 3 integer values:\n";
+//	cin >> a >> b >> c;
+//	while (!sort_flag) {
+//
+//		if (a > b) {
+//			a = a + b;
+//			b = a - b;
+//			a = a - b;	
+//			sort_flag = true;
+//		}
+//
+//		if (b > c) {
+//			b = b + c;
+//			c = b - c;
+//			b = b - c;
+//			sort_flag = true;
+//		}
+//		else sort_flag = false;
+//	}
+//	if (sort_flag = false)
+//		cout << a << ", " << b << ", " << c << "\n";
+//	keep_window_open();
+//	return 0;
+//}
+
 /*
-int main()
-{
-	double val1 = 0;
-	double val2 = 0;
-	int max = 0;
-	int min = 0;
-	cout << "Please, enter number 1 and number 2:\n";
-	cin >> val1 >> val2;
-	if (val1 > val2) {
-		max = val1;
-	}	
-	else 
-		max  = val2;
-	if (val1 < val2) {
-		min = val1;
-	}		
-	else
-		min = val2;
-	cout << "The biggest number is: " << max << "\n";
-	cout << "The smallest number is: " << min << "\n";
-	cout << "The summ of the numbers is: " << val1+val2 << "\n";
-	cout << "The difference between the numbers is: " << max - min << "\n";
-	cout << "The remainder of two values: " << max % min << "\n";
-	keep_window_open();
-	return 0;
-}
-*/
-/*
-int main()
-{
-	int a = 0;
-	int b = 0;
-	int c = 0;
-	cout << "Please, enter 3 integer values:\n";
-	while (cin >> a >> b >> c) {
-		if (a > b && b > c)
-			cout << c << ", " << b << ", " << a << "\n";
-		if (b > a && a > c)
-			cout << c << ", " << a << ", " << b << "\n";
-		if (c > b && b > a)
-			cout << a << ", " << b << ", " << c << "\n";
-		if (c > a && a > b)
-			cout << b << ", " << a << ", " << c << "\n";
-		if (b > c && c > a)
-			cout << a << ", " << c << ", " << b << "\n";
-		if (a > c && c > b)
-			cout << b << ", " << c << ", " << a << "\n";
-		if (a == b && b > c)
-			cout << c << ", " << a << ", " << b << "\n";
-		if (a == b && b < c)
-			cout << a << ", " << b << ", " << c << "\n";
-		if (a == c && c > b)
-			cout << b << ", " << a << ", " << c << "\n";
-		if (a == c && c < b)
-			cout << a << ", " << c << ", " << b << "\n";
-		if (b == c && c > a)
-			cout << a << ", " << b << ", " << c << "\n";
-		if (b == c && c < a)
-			cout << b << ", " << c << ", " << a << "\n";
-		if (a == c && c > b)
-			cout << a << ", " << b << ", " << c << "\n";
-		if (a == b && b == c)
-			cout << a << ", " << b << ", " << c << "\n";
-	}
-	keep_window_open();
-	return 0;
-}
-*/
-/*
-int main()
+int main()  //8. page 127 DONE
 {
 	int val = 0;
 	cout << "Please, enter integer number:\n";
@@ -153,59 +142,78 @@ int main()
 	return 0;
 }
 */
-/*
-int main() // 9. page 127
-{
-	string word = " ";
-	int val = 0;
-	cout << "Please, enter number word from 0 to 4:\n";
-	cin >> word;
-	if (word == "zero") {
-		val = 0;
-	}			
-	if (word == "one") {
-		val = 1;
-	}			
-	if (word == "two") {
-		val = 2;		
-	}	
-	if (word == "three") {
-		val = 3;
-	}			
-	if (word == "four") {
-		val = 4;
-	}
-	else {
-		word = "I dont know that number!\n";
-		cout << word;
-	}
-	cout << val << "\n";
-	keep_window_open();
-	return 0;
-}
-*/
 
-int main() //10
+//int main() // 9. page 127 DONE
+//{
+//	string word = " ";
+//	int val = -1;
+//	cout << "Please, enter number word from 0 to 4:\n";
+//	cin >> word;
+//	if (word == "zero") {
+//		val = 0;
+//	}			
+//	else if (word == "one") {
+//		val = 1;
+//	}			
+//	else if (word == "two") {
+//		val = 2;		
+//	}	
+//	else if (word == "three") {
+//		val = 3;
+//	}			
+//	else if (word == "four") {
+//		val = 4;
+//	}
+//	if (val != -1) {
+//		cout << val << "\n";
+//	}
+//	else {
+//		word = "I dont know that number!\n";
+//		cout << word;
+//	}
+//	keep_window_open();
+//	return 0;
+//}
+
+
+//int main() //10 page 127-128 DONE
+//{
+//	double div = 0;
+//	string operation = "";
+//	double value1 = 0;
+//	double value2 = 0;
+//	cout << "Please, enter operation and two numbers:\n";
+//	cin >> operation >> value1 >> value2;
+//	if (operation == "+")
+//		cout << "The summ of two numbers: " << value1 + value2 << "\n"; 
+//	else if (operation == "-")
+//		cout << "The difference between two numbers: " << value1 - value2 << "\n"; 
+//	else if (operation == "*")
+//		cout << "The multiplication of two numbers: " << value1 * value2 << "\n";
+//	else if (operation == "/") {
+//		div = value1 / value2;
+//		cout << "The divide of two numbers: " << div << "\n";
+//	}
+//	else {
+//		cout << "ERROORRRRRRRRRRRR ";
+//	}
+//	keep_window_open();
+//	return 0;
+//}
+
+
+int main()
 {
-	double div = 0;
-	string operation = "";
-	double value1 = 0;
-	double value2 = 0;
-	cout << "Please, enter operation and two numbers:\n";
-	cin >> operation >> value1 >> value2;
-	if (operation == "+")
-		cout << "The summ of two numbers: " << value1 + value2 << "\n";
-	if (operation == "-")
-		cout << "The difference between two numbers: " << value1 - value2 << "\n";
-	if (operation == "*")
-		cout << "The multiplication of two numbers: " << value1 * value2 << "\n";
-	if (operation == "/") {
-		div = value1 / value2;
-		cout << "The divide of two numbers: " << div << "\n";
+	double dollar = 0;
+	double gr = 0;
+	double rub = 0;
+	cin >> dollar;
+	if (dollar > 0){
+		gr = dollar * 26;
+		rub = dollar * 65;
+		cout << gr << " " << rub << "\n";
 	}	
-	else {
-		cout << "ERROORRRRRRRRRRRR ";
-	}		
 	keep_window_open();
 	return 0;
 }
+
