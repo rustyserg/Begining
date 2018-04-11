@@ -212,19 +212,19 @@ int main()
 	switch (currency) {
 	case 'gr': //case 'g': case 'hr':
 		vallue = dollar * 26.00;
-		cout << vallue << "\n";
+		cout << "gr = "<< vallue << "\n";
 		break;
 	case 'rub': //case 'ru': case 'r':
 		vallue = dollar * 65.00;
-		cout << vallue << "\n";
+		cout << "rub = "<< vallue << "\n";
 		break;
 	case 'eur':
 		vallue = dollar * 0.9;
-		cout << vallue << "\n";
+		cout << "eur = "<< vallue << "\n";
 		break;
 	case 'poun': //case 'po': case 'p': case 'pou':
 		vallue = dollar * 0.5;
-		cout << vallue << "\n";
+		cout << "pound = "<< vallue << "\n";
 		break;
 	default: 
 		cout << "Too much symbols or i don't know that currency.\n";
