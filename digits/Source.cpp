@@ -99,9 +99,9 @@ int main() //2 p.126 DONE
 //	return 0;
 //}
 
-//int main()  //5 p. 127
+//int main()  //5 p. 127 DONE
 //{
-//	int a, b, c = 0;
+//	int a = 0, b = 0, c = 0;
 //	bool sort_flag = false;
 //	cout << "Please, enter 3 integer values:\n";
 //	cin >> a >> b >> c;
@@ -111,18 +111,17 @@ int main() //2 p.126 DONE
 //			a = a + b;
 //			b = a - b;
 //			a = a - b;	
-//			sort_flag = true;
+//			sort_flag = false;
 //		}
 //
-//		if (b > c) {
+//		else if (b > c) {
 //			b = b + c;
 //			c = b - c;
 //			b = b - c;
-//			sort_flag = true;
+//			sort_flag = false;
 //		}
-//		else sort_flag = false;
+//		else sort_flag = true;
 //	}
-//	if (sort_flag = false)
 //		cout << a << ", " << b << ", " << c << "\n";
 //	keep_window_open();
 //	return 0;
@@ -202,39 +201,39 @@ int main()  //8. page 127 DONE
 //}
 
 
-int main()
-{
-	int dollar = 0;
-	char currency = ' ';
-	double vallue = 0;
-	cout << "Please, enter the number of dollars and currency (gr,rub,eur,poun):\n";
-	cin >> dollar >> currency;
-	switch (currency) {
-	case 'gr': //case 'g': case 'hr':
-		vallue = dollar * 26.00;
-		cout << "gr = "<< vallue << "\n";
-		break;
-	case 'rub': //case 'ru': case 'r':
-		vallue = dollar * 65.00;
-		cout << "rub = "<< vallue << "\n";
-		break;
-	case 'eur':
-		vallue = dollar * 0.9;
-		cout << "eur = "<< vallue << "\n";
-		break;
-	case 'poun': //case 'po': case 'p': case 'pou':
-		vallue = dollar * 0.5;
-		cout << "pound = "<< vallue << "\n";
-		break;
-	default: 
-		cout << "Too much symbols or i don't know that currency.\n";
-		break;
-	}	
-	keep_window_open();
-	return 0;
-}
+//int main()  // p. 149 DONE
+//{
+//	int dollar = 0;
+//	char currency = ' ';
+//	double vallue = 0;
+//	cout << "Please, enter the number of dollars and currency (g,r,e,p):\n";
+//	cin >> dollar >> currency;
+//	switch (currency) {
+//	case 'g':
+//		vallue = dollar * 26.00;
+//		cout << "gr = "<< vallue << "\n";
+//		break;
+//	case 'r':
+//		vallue = dollar * 65.00;
+//		cout << "rub = "<< vallue << "\n";
+//		break;
+//	case 'e':
+//		vallue = dollar * 0.9;
+//		cout << "eur = "<< vallue << "\n";
+//		break;
+//	case 'p':
+//		vallue = dollar * 0.5;
+//		cout << "pound = "<< vallue << "\n";
+//		break;
+//	default: 
+//		cout << "Too much symbols or i don't know that currency.\n";
+//		break;
+//	}	
+//	keep_window_open();
+//	return 0;
+//}
 
-//int main()
+//int main() //DONE
 //{
 //	int a = 0;
 //	cin >> a;
@@ -252,3 +251,67 @@ int main()
 //	keep_window_open();
 //	return 0;
 //}
+
+//int main()  p. 151 DONE
+//{
+//	char a = 'a';
+//	int i = 97;
+//	while (i<123) {
+//		cout << a << '\t' << i << '\n';
+//		++i;
+//		++a;
+//	}
+//	keep_window_open();
+//	return 0;
+//}
+
+
+//// Меняем местами
+//int main() {
+//	int a = 0;
+//	int b = 0;
+//	cin >> a >> b;
+//	if (a < b) {
+//	}
+//	else {
+//	int t;
+//	t = a;
+//	a = b;
+//	b = t;
+//	}
+//	cout << a << "\t" << b << "\n";
+//	keep_window_open();
+//	return 0;	
+//}
+
+//int main()   p. 154 DONE
+// {
+//	char a = 'a';
+//	char b = ' ';
+//	for (int i = 97; i < 123; ++i) {
+//		cout << a << '\t' << i << '\n';
+//		++a;
+//	}
+//	for (int i = 32; i < 58; i++) {
+//		cout << b << '\t' << i << '\n';
+//		++b;
+//	}
+//	keep_window_open();
+//	return 0;
+//}
+
+int square(int x) {
+	int y = 0;
+	for (int i = 0; i < x; ++i) {
+		y += x;
+	}
+	return y;
+}
+
+int main() {
+	for (int i = 0; i < 100; ++i) {
+		cout << i << "\t" << square(i) << "\n";
+	}
+	keep_window_open();
+	return 0;
+}
