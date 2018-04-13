@@ -18,3 +18,7 @@ bld/
 
 # Visual Studio 2015/2017 cache/options directory
 .vs/
+
+
+Project1.vcxproj
+Project1.vcxproj.filters

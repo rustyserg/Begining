@@ -412,6 +412,7 @@ int main() { // example 165
 	for (string temp; cin >> temp;) {
 		words.push_back(temp);
 	}
+	cout << words.size() << "\n";
 	for (int i = 0; i < words.size(); ++i) {
 		if (words[i] == disliked) {
 			words[i] = bleep;
