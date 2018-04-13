@@ -1,5 +1,7 @@
 #define _SILENCE_STDEXT_HASH_DEPRECATION_WARNINGS
 #include "D:\Projects\std_lib_facilities.h"
+#include <vector>
+#include <iostream>
 
 /*
 int main()
@@ -201,6 +203,87 @@ int main()  //8. page 127 DONE
 //}
 
 
+//int main()  // 11 p.128 DONE
+//{
+//	int one_cent= 0;
+//	int five_cent = 0;
+//	int ten_cent = 0;
+//	int twentyfive_cent = 0;
+//	int fifty_cent = 0;
+//	int dollar = 0;
+//	int amount1 = 0;
+//	int amount5 = 0;
+//	int amount10 = 0;
+//	int amount25 = 0;
+//	int amount50 = 0;
+//	int dollars_in_total = 0;
+//	int coins_in_total = 0;
+//	int y = 0;
+//	cout << "Please, enter amount of the one cent coints?\n";
+//	cin >> one_cent;
+//	cout << "Please, enter amount of the five cent coints?\n";
+//	cin >> five_cent;
+//	cout << "Please, enter the amount of ten cent coints?\n";
+//	cin >> ten_cent;
+//	cout << "Please, enter the amount of twentyfive cent coints?\n";
+//	cin >> twentyfive_cent;
+//	cout << "Please, enter the amount of fifty cent coints?\n";
+//	cin >> fifty_cent;
+//	cout << "Please, enter the amount of dollar coints?\n";
+//	cin >> dollar;
+//	if (one_cent == 1) {
+// 		cout << "You have " << one_cent << " one cent coin\n";
+//	}
+//	else {
+//		cout << "You have " << one_cent << " one cent coins\n";
+//	}
+//	if (five_cent == 1) {
+//		cout << "You have " << five_cent << " five cent coin\n";
+//	}
+//	else {
+//		cout << "You have " << five_cent << " five cent coins\n";
+//	}
+//	if (ten_cent == 1) {
+//		cout << "You have " << ten_cent << " ten cent coin\n";
+//	}
+//	else {
+//		cout << "You have " << ten_cent << " ten cent coins\n";
+//	}
+//	if (twentyfive_cent == 1) {
+//		cout << "You have " << twentyfive_cent << " twentyfive cent coin\n";
+//	}
+//	else {
+//		cout << "You have " << twentyfive_cent << " twentyfive cent coins\n";
+//	}
+//	if (fifty_cent == 1) {
+//		cout << "You have " << fifty_cent << " fifty cent coin\n";
+//	}
+//	else {
+//		cout << "You have " << fifty_cent << " fifty cent coins\n";
+//	}
+//	if (dollar == 1) {
+//		cout << "You have " << dollar << " one dollar\n";
+//	}
+//	else {
+//		cout << "You have " << dollar << " dollars\n";
+//	}
+//	amount1 = one_cent * 1;
+//	amount5 = five_cent * 5;
+//	amount10 = ten_cent * 10;
+//	amount25 = twentyfive_cent * 25;
+//	amount50 = fifty_cent * 50;
+//	y = amount1 + amount5 + amount10 + amount25 + amount50;
+//	if (y >= 100) {
+//		dollars_in_total = dollar + y / 100;
+//		coins_in_total = y - (y / 100)*100;
+//		cout << "The total value of your coins is " << dollars_in_total << " dollars " << coins_in_total << " cents." << "\n";
+//	}
+//	else
+//		cout << "The total value of your coins is " << dollar << " dollar " << y << " cents." << "\n";
+//	keep_window_open();
+//	return 0;
+//}
+
 //int main()  // p. 149 DONE
 //{
 //	int dollar = 0;
@@ -300,18 +383,41 @@ int main()  //8. page 127 DONE
 //	return 0;
 //}
 
-int square(int x) {
-	int y = 0;
-	for (int i = 0; i < x; ++i) {
-		y += x;
-	}
-	return y;
-}
 
-int main() {
-	for (int i = 0; i < 100; ++i) {
-		cout << i << "\t" << square(i) << "\n";
+//int square(int x)  p. 157 DONE
+//{		
+//	int y;
+//	for (int i = 0; i < x; ++i) {
+//		y += x;
+//	}
+//	return y;
+//}
+//
+//int main() {
+//	int t = 0;
+//	cin >> t;
+//	for (int i = 0; i < 100; ++i) {
+//		cout << i << "\t" << square(i) << "\n";
+//	}
+//	keep_window_open();
+//	return 0;
+//}
+
+
+int main() { // example 165
+
+	string bleep = "BLEEP";
+	string disliked = "Broccoli";
+	vector <string> words;
+	for (string temp; cin >> temp;) {
+		words.push_back(temp);
 	}
+	for (int i = 0; i < words.size(); ++i) {
+		if (words[i] == disliked) {
+			words[i] = bleep;
+		}
+		cout << words[i] << "\n";
+	}	
 	keep_window_open();
 	return 0;
 }
