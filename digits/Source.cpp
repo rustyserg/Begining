@@ -404,21 +404,114 @@ int main()  //8. page 127 DONE
 //}
 
 
-int main() { // example 165
+//int main() { // example 165 DONE
+//
+//	string bleep = "BLEEP";
+//	string disliked = "Broccoli";
+//	vector <string> words;
+//	for (string temp; cin >> temp;) {
+//		words.push_back(temp);
+//	}
+//	cout << words.size() << "\n";
+//	for (int i = 0; i < words.size(); ++i) {
+//		if (words[i] == disliked) {
+//			words[i] = bleep;
+//		}
+//		cout << words[i] << "\n";
+//	}	
+//	keep_window_open();
+//	return 0;
+//}
 
-	string bleep = "BLEEP";
-	string disliked = "Broccoli";
-	vector <string> words;
-	for (string temp; cin >> temp;) {
-		words.push_back(temp);
+//int main() {      // p. 167 DONE
+//	vector <double> numbers;
+//	double number1 = 0;
+//	double number2 = 0;
+//	double y = 1.0 / 100;
+//	double max = 0;
+//	double min = 0;
+//	while(cin >> number1 >> number2) {
+//			numbers.push_back(number1);
+//			numbers.push_back(number2);
+//		if (number1 < number2) {
+//			max = number2;
+//			min = number1;
+//			cout << "minimum = " << min << "\n";
+//			cout << "maximum = " << max << "\n";
+//		}
+//		else if (number1 > number2) {
+//			max = number1;
+//			min = number2;
+//			cout << "minimum = " << min << "\n";
+//			cout << "maximum = " << max << "\n";
+//		}
+//		else if (number1 = number2) {
+//			cout << "the numbers are equal." << "\n";
+//		}
+//		if (max - min < y) {
+//		cout << "the numbers are almost equal." << "\n";
+//		}
+//		for (int i = 0; i<numbers.size(); ++i) {
+//			cout << numbers[i] << "\n";
+//		}
+//	}
+//	keep_window_open();
+//	return 0;
+//}
+
+//int main() {  //p. 192 DONE
+//try {
+//	vector <int> v;
+//	for (int x; cin >> x;) {
+//		if (!cin) {
+//			error(" cant !!");
+//		}
+//		v.push_back(x);
+//		sort(v.rbegin(), v.rend());
+//	}
+//	for (int i = 0; i < v.size(); ++i) {
+//		cout << "v[" << i << "] == " << v[i] << "\n";
+//	}
+//	keep_window_open();
+//}
+//catch (out_of_range) {
+//	cerr << "range_error\n";
+//	keep_window_open();
+//	return 1;
+//}
+//catch (...) {
+//	cerr << "something goes wrong\n";
+//	keep_window_open();
+//	return 2;
+//}
+//}
+
+int  main()
+{
+	vector<double>  temps;
+	for (double temp; cin >> temp;) {
+		temps.push_back(temp);
 	}
-	cout << words.size() << "\n";
-	for (int i = 0; i < words.size(); ++i) {
-		if (words[i] == disliked) {
-			words[i] = bleep;
+	double sum = 0;
+	double hiqh_temp = -1110;
+	double low_temp = 1110;
+
+	const double min_temp = -100;
+	const double max_temp = 60;
+
+	for (double x: temps) {
+		if (x >= min_temp && x <= max_temp){
+		if (x > hiqh_temp) hiqh_temp = x;	
+		if (x < low_temp) low_temp = x;	
+		sum += x;
 		}
-		cout << words[i] << "\n";
-	}	
+		else {
+			error("WTF !?");
+		}
+	}
+	cout << "Max temp: " << hiqh_temp << "\n";
+	cout << "Min temp: " << low_temp << "\n";
+	cout << "Middle temp: " << sum / temps.size() << "\n";
 	keep_window_open();
 	return 0;
 }
