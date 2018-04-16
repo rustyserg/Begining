@@ -474,7 +474,7 @@ int main()  //8. page 127 DONE
 //	}
 //	keep_window_open();
 //}
-//catch (out_of_range) {
+//catch (runtime_error) {
 //	cerr << "range_error\n";
 //	keep_window_open();
 //	return 1;
@@ -486,32 +486,98 @@ int main()  //8. page 127 DONE
 //}
 //}
 
-int  main()
-{
-	vector<double>  temps;
-	for (double temp; cin >> temp;) {
-		temps.push_back(temp);
-	}
-	double sum = 0;
-	double hiqh_temp = -1110;
-	double low_temp = 1110;
+//int  main()  // with magic numbers;
+//{
+//	vector<double>  temps;
+//	for (double temp; cin >> temp;) {
+//		temps.push_back(temp);
+//	}
+//	double sum = 0;
+//	double hiqh_temp = -1110;
+//	double low_temp = 1110;
+//
+//	const double min_temp = -100;
+//	const double max_temp = 60;
+//
+//	for (double x: temps) {
+//		if (x >= min_temp && x <= max_temp){
+//		if (x > hiqh_temp) hiqh_temp = x;	
+//		if (x < low_temp) low_temp = x;	
+//		sum += x;
+//		}
+//		else {
+//			error("WTF !?");
+//		}
+//	}
+//	cout << "Max temp: " << hiqh_temp << "\n";
+//	cout << "Min temp: " << low_temp << "\n";
+//	cout << "Middle temp: " << sum / temps.size() << "\n";
+//	keep_window_open();
+//	return 0;
+//}
 
-	const double min_temp = -100;
-	const double max_temp = 60;
+//double ctock(double k) {   // p . 214 tasks 1-5 DONE 
+//	double c = k - 273.15;
+//	if (k < 0) {
+//		cout << "The temperature is below 0K";
+//		error("The temperature is below 0K");
+//		keep_window_open();
+//	}
+//	else {
+//		return c;
+//	}
+//}
+//int main() {
+//	double k = 0;
+//	cin >> k;
+//	cout << "The temperature is " << ctock(k) << "C" << "\n";
+//	keep_window_open();
+//	return  0;
+//}
 
-	for (double x: temps) {
-		if (x >= min_temp && x <= max_temp){
-		if (x > hiqh_temp) hiqh_temp = x;	
-		if (x < low_temp) low_temp = x;	
-		sum += x;
-		}
-		else {
-			error("WTF !?");
-		}
+//double from_c_to_f(double c) {   // p . 214 task 6 DONE 
+//	double f = 9.0/5.0*c + 32; 
+//	if (c < -273.15) {
+//		cout << "The temperature is below -273.15";
+//		error("The temperature is below -273.15");
+//		keep_window_open();
+//	}
+//	else {
+//		return f;
+//	}
+//}
+//
+//int main() {
+//	double c = 0;
+//	cin >> c;
+//	cout << "The temperature is " << from_c_to_f(c) << "F" << "\n";
+//	keep_window_open();
+//	return  0;
+//}
+
+void quadratic_equation(double a, double b, double c) {   // p . 214 task 7 DONE
+	double x1 = 0;
+	double x2 = 0;
+	if ((b*b - 4 * a*c) < 0) {
+		cout << "There are no real roots (D < 0)";
+		error("There are no real roots (D < 0)");
+		keep_window_open();
 	}
-	cout << "Max temp: " << hiqh_temp << "\n";
-	cout << "Min temp: " << low_temp << "\n";
-	cout << "Middle temp: " << sum / temps.size() << "\n";
+	else {
+		x1 = (-b + sqrt(b*b - 4 * a*c)) / 2 * a*c;
+		x2 = (-b - sqrt(b*b - 4 * a*c)) / 2 * a*c;
+		cout << "x1 = " << x1 <<"\n";
+		cout << "x2 = " << x2 << "\n";
+	}
+}
+
+int main() {
+	double a = 0;
+	double b = 0;
+	double c = 0;
+	cout << "Please enter a, b, c (int or double values)\n";
+	cin >> a >> b >> c;
+	quadratic_equation(a, b, c);
 	keep_window_open();
-	return 0;
+	return  0;
 }
