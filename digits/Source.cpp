@@ -579,7 +579,7 @@ int main()  //8. page 127 DONE
 //	return  0;
 //}
 
-//bool is_number(const string& s)
+//bool is_number(const string& s) // p. 215 tasks 8-10
 //{
 //	std::string::const_iterator it = s.begin();
 //	while (it != s.end() && isdigit(*it)) ++it;
@@ -592,7 +592,7 @@ int main()  //8. page 127 DONE
 //	}
 //}
 //
-//int main() {     // p. 215 tasks 8-10
+//int main() {     
 //	vector <double> values;
 //	double sum = 0;
 //	int number =0;
@@ -620,26 +620,6 @@ int main()  //8. page 127 DONE
 //	return 0;
 //}
 
-//int main()
-//{
-//	vector <int> mountainH;
-//	// game loop
-//	int max_index = 0;
-//	for (int x; cin >> x;) {
-//			mountainH.push_back(x); // represents the height of one mountain.
-//		}
-//		// Write an action using cout. DON'T FORGET THE "<< endl
-//		sort(mountainH.rbegin(), mountainH.rend());
-//		for (int i = 0; i < mountainH.size(); i++) {
-//			max_index = mountainH[i];
-//		}
-//		// To debug: cerr << "Debug messages..." << endl;
-//		cout << max_index << ' ';
-//		keep_window_open();
-//		// The index of the mountain to fire on.
-//}
-
-
 //int main() {  // The Descent coding game
 //
 //	while (1) {
@@ -657,7 +637,7 @@ int main()  //8. page 127 DONE
 //	}
 //}
 
-int main() {
+int main() {   // 11 p.215  
 	int max_number = 0;
 	int massive[10] = { 1, 1, 2, 3, 5, 8, 13, 21, 34 };
 	vector<int> sequence(massive, massive+9);
@@ -672,22 +652,4 @@ int main() {
 	return 0;
 }
 
-//long int Fib(int i)
-//
-//{
-//	int value = 0;
-//	if (i < 1) return 0;
-//	if (i == 1) return 1;
-//	return Fib(i - 1) + Fib(i - 2);
-//}
-//
-//long int main()
-//{
-//	for (int i = 0; i < 47;	i++)
-//	{
-//		cout << Fib(i) << endl;
-//	}
-//	return 0;
-//}
-//
 
