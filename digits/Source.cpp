@@ -367,7 +367,7 @@ int main()  //8. page 127 DONE
 //	return 0;	
 //}
 
-//int main()   p. 154 DONE
+//int main()    // p. 154 DONE
 // {
 //	char a = 'a';
 //	char b = ' ';
@@ -384,9 +384,9 @@ int main()  //8. page 127 DONE
 //}
 
 
-//int square(int x)  p. 157 DONE
+//int square(int x)   // p. 157 DONE
 //{		
-//	int y;
+//	int y = 0;
 //	for (int i = 0; i < x; ++i) {
 //		y += x;
 //	}
@@ -394,15 +394,12 @@ int main()  //8. page 127 DONE
 //}
 //
 //int main() {
-//	int t = 0;
-//	cin >> t;
 //	for (int i = 0; i < 100; ++i) {
 //		cout << i << "\t" << square(i) << "\n";
 //	}
 //	keep_window_open();
 //	return 0;
 //}
-
 
 //int main() { // example 165 DONE
 //
@@ -555,29 +552,142 @@ int main()  //8. page 127 DONE
 //	return  0;
 //}
 
-void quadratic_equation(double a, double b, double c) {   // p . 214 task 7 DONE
-	double x1 = 0;
-	double x2 = 0;
-	if ((b*b - 4 * a*c) < 0) {
-		cout << "There are no real roots (D < 0)";
-		error("There are no real roots (D < 0)");
-		keep_window_open();
-	}
-	else {
-		x1 = (-b + sqrt(b*b - 4 * a*c)) / 2 * a*c;
-		x2 = (-b - sqrt(b*b - 4 * a*c)) / 2 * a*c;
-		cout << "x1 = " << x1 <<"\n";
-		cout << "x2 = " << x2 << "\n";
-	}
-}
+//void quadratic_equation(double a, double b, double c) {   // p. 214 task 7 DONE
+//	double x1 = 0;
+//	double x2 = 0;
+//	if ((b*b - 4 * a*c) < 0) {
+//		cout << "There are no real roots (D < 0)";
+//		error("There are no real roots (D < 0)");
+//		keep_window_open();
+//	}
+//	else {
+//		x1 = (-b + sqrt(b*b - 4 * a*c)) / 2 * a*c;
+//		x2 = (-b - sqrt(b*b - 4 * a*c)) / 2 * a*c;
+//		cout << "x1 = " << x1 <<"\n";
+//		cout << "x2 = " << x2 << "\n";
+//	}
+//}
+//
+//int main() {
+//	double a = 0;
+//	double b = 0;
+//	double c = 0;
+//	cout << "Please enter a, b, c (int or double values)\n";
+//	cin >> a >> b >> c;
+//	quadratic_equation(a, b, c);
+//	keep_window_open();
+//	return  0;
+//}
+
+//bool is_number(const string& s)
+//{
+//	std::string::const_iterator it = s.begin();
+//	while (it != s.end() && isdigit(*it)) ++it;
+//	return !s.empty() && it == s.end();
+//}
+//
+//void first_n_digits(int number, const vector <double> &values) {
+//	for (int i = 0; i < number; ++i) {
+//		cout << values[i] << " ";
+//	}
+//}
+//
+//int main() {     // p. 215 tasks 8-10
+//	vector <double> values;
+//	double sum = 0;
+//	int number =0;
+//	cout << "Please, enter the number of summable values: \n";
+//	cin >> number;
+//	if (!is_number) {
+//		error("The number is not integer");
+//	}
+//	cout << "Please, enter a few double values: \n";
+//	for (double value; cin >> value;) {
+//		values.push_back(value);
+//	}
+//	if (number > values.size()) {
+//		error("The number vallue is more than vector size!");
+//	}
+//	else {
+//		for (int i = 0; i < number; ++i) {
+//			sum += values[i];
+//		}
+//	}
+//	cout << "The summ of the first " << number << " values (";
+//	first_n_digits(number, values);
+//	cout << ")" << " = " << sum << "\n";
+//	keep_window_open();
+//	return 0;
+//}
+
+//int main()
+//{
+//	vector <int> mountainH;
+//	// game loop
+//	int max_index = 0;
+//	for (int x; cin >> x;) {
+//			mountainH.push_back(x); // represents the height of one mountain.
+//		}
+//		// Write an action using cout. DON'T FORGET THE "<< endl
+//		sort(mountainH.rbegin(), mountainH.rend());
+//		for (int i = 0; i < mountainH.size(); i++) {
+//			max_index = mountainH[i];
+//		}
+//		// To debug: cerr << "Debug messages..." << endl;
+//		cout << max_index << ' ';
+//		keep_window_open();
+//		// The index of the mountain to fire on.
+//}
+
+
+//int main() {  // The Descent coding game
+//
+//	while (1) {
+//		int max_height = 0;
+//		int max_index = 0;
+//		for (int i = 0; i < 8; i++) {
+//			int mountainH;
+//			cin >> mountainH; cin.ignore();
+//			if (max_height < mountainH) {
+//				max_height = mountainH;
+//				max_index = i;
+//			}
+//		}
+//		cout << max_index << endl;
+//	}
+//}
 
 int main() {
-	double a = 0;
-	double b = 0;
-	double c = 0;
-	cout << "Please enter a, b, c (int or double values)\n";
-	cin >> a >> b >> c;
-	quadratic_equation(a, b, c);
+	int max_number = 0;
+	int massive[10] = { 1, 1, 2, 3, 5, 8, 13, 21, 34 };
+	vector<int> sequence(massive, massive+9);
+	for (int x: sequence)
+	cout << x << ", \n";
+	for (int i = 9; i < 47; ++i) {
+		sequence[i] = sequence[i - 1] + sequence[i - 2];
+		sequence.push_back(sequence[i]);
+		cout << sequence[i] << ", \n";
+	}
 	keep_window_open();
-	return  0;
+	return 0;
 }
+
+//long int Fib(int i)
+//
+//{
+//	int value = 0;
+//	if (i < 1) return 0;
+//	if (i == 1) return 1;
+//	return Fib(i - 1) + Fib(i - 2);
+//}
+//
+//long int main()
+//{
+//	for (int i = 0; i < 47;	i++)
+//	{
+//		cout << Fib(i) << endl;
+//	}
+//	return 0;
+//}
+//
+
