@@ -1,7 +1,11 @@
-#define _SILENCE_STDEXT_HASH_DEPRECATION_WARNINGS
-#include "D:\Projects\std_lib_facilities.h"
+//#define _SILENCE_STDEXT_HASH_DEPRECATION_WARNINGS
+//#include "D:\Projects\std_lib_facilities.h"
 #include <vector>
 #include <iostream>
+#include <cmath>
+#include <limits>
+#include <system_error>
+using namespace std;
 
 /*
 int main()
@@ -638,17 +642,24 @@ int main()  //8. page 127 DONE
 //}
 
 int main() {   // 11 p.215  
-	int max_number = 0;
-	int massive[10] = { 1, 1, 2, 3, 5, 8, 13, 21, 34 };
-	vector<int> sequence(massive, massive+9);
+	int max_number = std::numeric_limits<int>::max();
+	std::vector <int> sequence = {1, 1, 2, 3, 5, 8, 13, 21, 34}; 
 	for (int x: sequence)
-	cout << x << ", \n";
-	for (int i = 9; i < 47; ++i) {
+	cout << x << "\n";
+	//auto it = sequence.end();
+	//it = sequence.insert(it, 0);
+	sequence.push_back(0);
+	for (int i = 9; i < 50; ++i) {
 		sequence[i] = sequence[i - 1] + sequence[i - 2];
 		sequence.push_back(sequence[i]);
-		cout << sequence[i] << ", \n";
+		if (sequence[i] > max_number) {
+			error_code(value);
+		}	
+		else {
+			cout << sequence[i] << "\n";
+		}
 	}
-	keep_window_open();
+	std::getchar();
 	return 0;
 }
 
