@@ -1,10 +1,17 @@
-//#define _SILENCE_STDEXT_HASH_DEPRECATION_WARNINGS
-//#include "D:\Projects\std_lib_facilities.h"
+#define _SILENCE_STDEXT_HASH_DEPRECATION_WARNINGS
+#include "D:\Projects\std_lib_facilities.h"
 #include <vector>
 #include <iostream>
 #include <cmath>
 #include <limits>
 #include <system_error>
+#include <stdexcept>
+#include <iomanip>
+#include <string>
+#include <algorithm>
+#include <numeric>
+#include <iterator>
+
 using namespace std;
 
 /*
@@ -583,23 +590,23 @@ int main()  //8. page 127 DONE
 //	return  0;
 //}
 
-//bool is_number(const string& s) // p. 215 tasks 8-10
-//{
-//	std::string::const_iterator it = s.begin();
-//	while (it != s.end() && isdigit(*it)) ++it;
-//	return !s.empty() && it == s.end();
-//}
-//
-//void first_n_digits(int number, const vector <double> &values) {
-//	for (int i = 0; i < number; ++i) {
-//		cout << values[i] << " ";
-//	}
-//}
-//
+bool is_number(const string& s) // p. 215 tasks 8-10
+{
+	std::string::const_iterator it = s.begin();
+	while (it != s.end() && isdigit(*it)) ++it;
+	return !s.empty() && it == s.end();
+}
+
+void first_n_digits(int number, const vector <double> &values) {
+	for (int i = 0; i < number; ++i) {
+		cout << values[i] << " ";
+	}
+}
+
 //int main() {     
 //	vector <double> values;
 //	double sum = 0;
-//	int number =0;
+//	int number = 0;
 //	cout << "Please, enter the number of summable values: \n";
 //	cin >> number;
 //	if (!is_number) {
@@ -620,7 +627,7 @@ int main()  //8. page 127 DONE
 //	cout << "The summ of the first " << number << " values (";
 //	first_n_digits(number, values);
 //	cout << ")" << " = " << sum << "\n";
-//	keep_window_open();
+//	system("pause");
 //	return 0;
 //}
 
@@ -641,26 +648,68 @@ int main()  //8. page 127 DONE
 //	}
 //}
 
-int main() {   // 11 p.215  
-	int max_number = std::numeric_limits<int>::max();
-	std::vector <int> sequence = {1, 1, 2, 3, 5, 8, 13, 21, 34}; 
-	for (int x: sequence)
-	cout << x << "\n";
-	//auto it = sequence.end();
-	//it = sequence.insert(it, 0);
-	sequence.push_back(0);
-	for (int i = 9; i < 50; ++i) {
-		sequence[i] = sequence[i - 1] + sequence[i - 2];
-		sequence.push_back(sequence[i]);
-		if (sequence[i] > max_number) {
-			error_code(value);
-		}	
-		else {
-			cout << sequence[i] << "\n";
-		}
+//int main() {   // 11 p.215  DONE
+//
+//	int max_value = std::numeric_limits<int>::max();
+//	std::vector <int> sequence = {1, 1, 2, 3, 5, 8, 13, 21, 34}; 
+//	for (int x: sequence)
+//	cout << x << "\n";
+//	//auto it = sequence.end();
+//	//it = sequence.insert(it, 0);
+//	sequence.push_back(0);
+//	try //код, который может привести к ошибке, располагается тут
+//	{
+//		for (int i = 9; i < 51; ++i) {
+//			unsigned int error = sequence[i - 1] + sequence[i - 2];
+//			if (error > max_value)
+//			{
+//				throw 1; //генерировать целое число 1
+//			}
+//			else {
+//				sequence[i] = sequence[i - 1] + sequence[i - 2];
+//				sequence.push_back(sequence[i]);
+//				cout << sequence[i] << "\n";
+//			}
+//		}
+//	}
+//	catch (int i)//сюда передастся число 1
+//	{
+//		cout << "ERROR:" << i << " the summ of las number + previous number is more than int" << endl;
+//	}
+//	system("pause");
+//	return 0;
+//}
+
+//int main() // Why x == 1 ???
+//{
+//	int x = 0;
+//	int y = 0;
+//
+//	if (++x && y++)
+//	{
+//		y += 2;
+//	}
+//	std::cout << x << std::endl;
+//	std::cout << x + y << std::endl;
+//	system("pause");
+//	return 0;
+//}
+
+int main()
+{
+	string stars = " ";
+	int num_of_levels = 0;
+	int sum_of_glasses = 0;
+	std::cout << "Enter number of levels: " << std::endl;
+	cin >> num_of_levels;
+
+	for (int i = 1; i <= num_of_levels; ++i)
+	{
+		sum_of_glasses += i;
+		stars += "*";
+		std::cout << stars << std::endl;
 	}
-	std::getchar();
+	std::cout << sum_of_glasses << std::endl;
+	system("pause");
 	return 0;
 }
-
-
