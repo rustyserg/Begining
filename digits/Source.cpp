@@ -1,5 +1,5 @@
-#define _SILENCE_STDEXT_HASH_DEPRECATION_WARNINGS
-#include "D:\Projects\std_lib_facilities.h"
+//#define _SILENCE_STDEXT_HASH_DEPRECATION_WARNINGS
+//#include "D:\Projects\std_lib_facilities.h"
 #include <vector>
 #include <iostream>
 #include <cmath>
@@ -590,34 +590,40 @@ int main()  //8. page 127 DONE
 //	return  0;
 //}
 
-bool is_number(const string& s) // p. 215 tasks 8-10
-{
-	std::string::const_iterator it = s.begin();
-	while (it != s.end() && isdigit(*it)) ++it;
-	return !s.empty() && it == s.end();
-}
-
-void first_n_digits(int number, const vector <double> &values) {
-	for (int i = 0; i < number; ++i) {
-		cout << values[i] << " ";
-	}
-}
-
+//bool is_number(const string& s) // p. 215 tasks 8-10 DONE 
+//{
+//	std::string::const_iterator it = s.begin();
+//	while (it != s.end() && isdigit(*it)) ++it;
+//	return !s.empty() && it == s.end();
+//}
+//
+//void first_n_digits(int number, const vector <double> &values) {
+//	for (int i = 0; i < number; ++i) {
+//		cout << values[i] << " ";
+//	}
+//}
+//
 //int main() {     
 //	vector <double> values;
 //	double sum = 0;
+//	string s_number = "";
 //	int number = 0;
-//	cout << "Please, enter the number of summable values: \n";
-//	cin >> number;
-//	if (!is_number) {
-//		error("The number is not integer");
+//	cout << "Please, enter the number of summable values:\n";
+//	cin >> s_number;
+//	if (!is_number(s_number)) {
+//		cerr << "The number is not integer. Try again.\n";
+//		system("pause");
+//		return 0;
 //	}
 //	cout << "Please, enter a few double values: \n";
 //	for (double value; cin >> value;) {
 //		values.push_back(value);
 //	}
+//	number = atoi(s_number.c_str());
 //	if (number > values.size()) {
-//		error("The number vallue is more than vector size!");
+//		cerr << "The number vallue is more than vector size!\n";
+//		system("pause");
+//		return 0;
 //	}
 //	else {
 //		for (int i = 0; i < number; ++i) {
@@ -682,34 +688,34 @@ void first_n_digits(int number, const vector <double> &values) {
 
 //int main() // Why x == 1 ???
 //{
-//	int x = 0;
-//	int y = 0;
+//	volatile int x = 0;
+//	volatile int y = 0;
 //
-//	if (++x && y++)
+//	if (x++ && y++)
 //	{
 //		y += 2;
 //	}
 //	std::cout << x << std::endl;
-//	std::cout << x + y << std::endl;
+//	std::cout << y << std::endl;
 //	system("pause");
 //	return 0;
 //}
 
-int main()
-{
-	string stars = " ";
-	int num_of_levels = 0;
-	int sum_of_glasses = 0;
-	std::cout << "Enter number of levels: " << std::endl;
-	cin >> num_of_levels;
-
-	for (int i = 1; i <= num_of_levels; ++i)
-	{
-		sum_of_glasses += i;
-		stars += "*";
-		std::cout << stars << std::endl;
-	}
-	std::cout << sum_of_glasses << std::endl;
-	system("pause");
-	return 0;
-}
+//int main()
+//{
+//	string stars = " ";
+//	int num_of_levels = 0;
+//	int sum_of_glasses = 0;
+//	std::cout << "Enter number of levels: " << std::endl;
+//	cin >> num_of_levels;
+//
+//	for (int i = 1; i <= num_of_levels; i++)
+//	{
+//		sum_of_glasses += i;
+//		stars += "*";
+//		std::cout << stars << std::endl;
+//	}
+//	std::cout << sum_of_glasses << std::endl;
+//	system("pause");
+//	return 0;
+//}
