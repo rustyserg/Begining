@@ -610,25 +610,27 @@ int main()  //8. page 127 DONE
 //	int number = 0;
 //	cout << "Please, enter the number of summable values:\n";
 //	cin >> s_number;
-//	if (!is_number(s_number)) {
+//	if (is_number(s_number)) {
+//		number = atoi(s_number.c_str());
+//		cout << "Please, enter a few double values: \n";
+//		for (double value; cin >> value;) {
+//			values.push_back(value);
+//		}
+//		if (number > values.size()) {
+//			cerr << "The number vallue is more than vector size!\n";
+//			system("pause");
+//			return 0;
+//		}
+//		else {
+//			for (int i = 0; i < number; ++i) {
+//				sum += values[i];
+//			}
+//		}
+//	}
+//	else {
 //		cerr << "The number is not integer. Try again.\n";
 //		system("pause");
 //		return 0;
-//	}
-//	cout << "Please, enter a few double values: \n";
-//	for (double value; cin >> value;) {
-//		values.push_back(value);
-//	}
-//	number = atoi(s_number.c_str());
-//	if (number > values.size()) {
-//		cerr << "The number vallue is more than vector size!\n";
-//		system("pause");
-//		return 0;
-//	}
-//	else {
-//		for (int i = 0; i < number; ++i) {
-//			sum += values[i];
-//		}
 //	}
 //	cout << "The summ of the first " << number << " values (";
 //	first_n_digits(number, values);
@@ -688,8 +690,8 @@ int main()  //8. page 127 DONE
 
 //int main() // Why x == 1 ???
 //{
-//	volatile int x = 0;
-//	volatile int y = 0;
+//	int x = 0;
+//	int y = 0;
 //
 //	if (x++ && y++)
 //	{
@@ -719,3 +721,126 @@ int main()  //8. page 127 DONE
 //	system("pause");
 //	return 0;
 //}
+
+//int main()  // outsmarted myself
+//{
+//	int number = 0;
+//	std::cout << "Enter five-digit number:" << std::endl;
+//	cin >> number;
+//	if (number < 100000) {
+//		int first = number / 10000;
+//		int second = (number % 10000) / 1000;
+//		int third = ((number % 10000) % 1000) / 100;
+//		int fourth = (((number % 10000) % 1000) % 100) / 10;
+//		int fifth = (((number % 10000) % 1000) % 100) % 10;
+//
+//		std::cout << "1 digit = " << first << std::endl;
+//		std::cout << "2 digit = " << second << std::endl;
+//		std::cout << "3 digit = " << third << std::endl;
+//		std::cout << "4 digit = " << fourth << std::endl;
+//		std::cout << "5 digit = " << fifth << std::endl;
+//	}
+//	else {
+//		cerr << ("You entered an incorrect number. The number must be five-digit.") << endl;
+//	}
+//	system("pause");
+//	return 0;
+//}
+
+//int main() {    // DONE
+//	string name = "";
+//	string second_name = "";
+//	string patronymic = "";
+//	string group = "";
+//	cout << "Enter name of a student: ";
+//	cin >> name;
+//	cout << "Enter second name of a student: ";
+//	cin >> second_name;
+//	cout << "Enter patronymic of a student: ";
+//	cin >> patronymic;
+//	cout << "Enter number of a group: ";
+//	cin >> group;
+//
+//	int len = 34;
+//	int len_str1 = (29 + group.length());
+//	int len_str2 = name.length() + second_name.length() + patronymic.length();
+//	if (len_str1 >= len_str2 && len_str1 > len) {
+//		len = len_str1;
+//	}	
+//	else
+//		if (len_str2 > len) {
+//			len = len_str2;
+//		}
+//	 cout << "\n\t\t\t";
+//	 for (int i = 0; i < len; i++) {
+//		 cout << "*";
+//	 }
+//	 cout << "\n\t\t\t* Laboratory work N1";
+//	 for (int i = 0; i < (len - 21); i++) {
+//		 cout << " ";
+//	}
+//	cout << "*\n\t\t\t* is done by a student gr. " << group;
+//	for (int i = 0; i <= (len - len_str1); i++) {
+//		cout << " ";
+//	}	
+//	cout << "*\n\t\t\t* " << second_name << " " << name << " " << patronymic;
+//	for (int i = 6; i <= (len - len_str2); i++) {
+//		cout << " ";
+//	}
+//	cout << "*\n\t\t\t"; 
+//	for (int i = 0; i < len; i++) {
+//		cout << "*";
+//	}	
+//	cout << endl;
+//	system("pause");
+//	return 0;
+
+
+int main() // all test cases passed !!!!!!!!!
+{
+	vector <int> pos (1);
+	vector <int> neg (1);
+	int min = 0;
+	int n; // the number of temperatures to analyse
+	cin >> n; cin.ignore();
+	if (n == 0) {
+		cout << 0 << endl;
+		return 0;
+	}
+	for (int i = 0; i < n; i++) {
+		int t; // a temperature expressed as an integer ranging from -273 to 5526
+		cin >> t; cin.ignore();
+		if (t >= 0) {
+			pos.push_back(t);
+		}
+		else
+			if (t <= 0) {
+				neg.push_back(t);
+			}
+	}
+	sort(pos.begin(), pos.end());
+	sort(neg.rbegin(), neg.rend());
+	if (neg.size() == 1) {
+		min = pos[1];
+		cout << min << endl;
+		return 1;
+	}
+	if (pos.size() > 1) {
+	if (abs(pos[1]) == abs(neg[1])) {
+		min = pos[1];
+	}
+	else 
+		if (abs(pos[1]) > abs(neg[1])) {
+		min = neg[1];
+		}
+		else {
+			min = pos[1];
+		}
+	}
+	else {
+		min = neg[1];
+	}
+	cout << min << endl;
+	system("pause");
+	return 0;	
+}
