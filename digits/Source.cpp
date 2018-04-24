@@ -810,11 +810,11 @@ int main() // all test cases passed !!!!!!!!!
 	for (int i = 0; i < n; i++) {
 		int t; // a temperature expressed as an integer ranging from -273 to 5526
 		cin >> t; cin.ignore();
-		if (t >= 0) {
+		if (t > 0) {
 			pos.push_back(t);
 		}
 		else
-			if (t <= 0) {
+			if (t < 0) {
 				neg.push_back(t);
 			}
 	}
@@ -826,16 +826,16 @@ int main() // all test cases passed !!!!!!!!!
 		return 1;
 	}
 	if (pos.size() > 1) {
-	if (abs(pos[1]) == abs(neg[1])) {
+		if (abs(pos[1]) == abs(neg[1])) {
 		min = pos[1];
-	}
-	else 
-		if (abs(pos[1]) > abs(neg[1])) {
-		min = neg[1];
 		}
-		else {
-			min = pos[1];
-		}
+		else 
+			if (abs(pos[1]) > abs(neg[1])) {
+			min = neg[1];
+			}
+			else {
+				min = pos[1];
+			}
 	}
 	else {
 		min = neg[1];
