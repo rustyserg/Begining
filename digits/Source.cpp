@@ -796,51 +796,128 @@ int main()  //8. page 127 DONE
 //	return 0;
 
 
-int main() // all test cases passed !!!!!!!!!
-{
-	vector <int> pos (1);
-	vector <int> neg (1);
-	int min = 0;
-	int n; // the number of temperatures to analyse
-	cin >> n; cin.ignore();
-	if (n == 0) {
-		cout << 0 << endl;
-		return 0;
-	}
-	for (int i = 0; i < n; i++) {
-		int t; // a temperature expressed as an integer ranging from -273 to 5526
-		cin >> t; cin.ignore();
-		if (t > 0) {
-			pos.push_back(t);
-		}
-		else
-			if (t < 0) {
-				neg.push_back(t);
-			}
-	}
-	sort(pos.begin(), pos.end());
-	sort(neg.rbegin(), neg.rend());
-	if (neg.size() == 1) {
-		min = pos[1];
-		cout << min << endl;
-		return 1;
-	}
-	if (pos.size() > 1) {
-		if (abs(pos[1]) == abs(neg[1])) {
-		min = pos[1];
-		}
-		else 
-			if (abs(pos[1]) > abs(neg[1])) {
-			min = neg[1];
-			}
-			else {
-				min = pos[1];
-			}
-	}
-	else {
-		min = neg[1];
-	}
-	cout << min << endl;
-	system("pause");
-	return 0;	
-}
+//int main()		// TEMPERATURES all test cases passed !!!!!!!!!
+//{
+//	vector <int> pos (1);
+//	vector <int> neg (1);
+//	int min = 0;
+//	int n; // the number of temperatures to analyse
+//	cin >> n; cin.ignore();
+//	if (n == 0) {
+//		cout << 0 << endl;
+//		return 0;
+//	}
+//	for (int i = 0; i < n; i++) {
+//		int t; // a temperature expressed as an integer ranging from -273 to 5526
+//		cin >> t; cin.ignore();
+//		if (t > 0) {
+//			pos.push_back(t);
+//		}
+//		else
+//			if (t < 0) {
+//				neg.push_back(t);
+//			}
+//	}
+//	sort(pos.begin(), pos.end());
+//	sort(neg.rbegin(), neg.rend());
+//	if (neg.size() == 1) {
+//		min = pos[1];
+//		cout << min << endl;
+//		return 1;
+//	}
+//	if (pos.size() > 1) {
+//		if (abs(pos[1]) == abs(neg[1])) {
+//		min = pos[1];
+//		}
+//		else 
+//			if (abs(pos[1]) > abs(neg[1])) {
+//			min = neg[1];
+//			}
+//			else {
+//				min = pos[1];
+//			}
+//	}
+//	else {
+//		min = neg[1];
+//	}
+//	cout << min << endl;
+//	system("pause");
+//	return 0;	
+//}
+
+//int main()		//There is no Spoon - Episode 1 DONE
+//{
+//	short width; // the number of cells on the X axis
+//	cin >> width; cin.ignore();
+//	short height; // the number of cells on the Y axis
+//	cin >> height; cin.ignore();
+//	string *field = new string[height];
+//	short x, y;
+//	for (y = 0; y < height; y++)
+//	{
+//		getline(cin, field[y]);
+//	}
+//	for (y = 0; y < height; y++)
+//	{
+//		for (x = 0; x < width; x++)
+//		{
+//			if (field[y][x] == '0') {
+//				cout << x << ' ' << y << ' ';
+//				short x2, y2, empty_x = -1, empty_y = -1;
+//				for (x2 = x + 1; x2 < width; ++x2)
+//				{
+//					if (field[y][x2] == '0')
+//					{
+//						empty_x = x2;
+//						empty_y = y;
+//						break;
+//					}
+//				}
+//				cout << empty_x << ' ' << empty_y << ' ';
+//				empty_x = -1; empty_y = -1;
+//				for (y2 = y + 1; y2 < height; ++y2)
+//				{
+//					if (field[y2][x] == '0')
+//					{
+//						empty_x = x;
+//						empty_y = y2;
+//						break;
+//					}
+//				}
+//				cout << empty_x << ' ' << empty_y << '\n';
+//				x = x2 - 1;
+//			}
+//		}
+//	}
+//	system("pause");
+//	return 0;
+//}
+
+//class Token {
+//	public:
+//			char kind;
+//			double value;
+//};
+//
+//Token get_token();
+//vector<Token> tok;
+//
+//int main() {
+//	while (cin) {
+//		Token t = get_token();
+//		tok.push_back(t);
+//	}
+//	for (int i = 0; i < tok.size(); i++) {
+//		if (tok[i].kind == '*') {
+//			double d = tok[i - 1].value * tok[i - 2].value;
+//			cout << d << endl;
+//		}
+//	}
+//	system("pause");
+//	return 0;
+//}
+//
+//Token get_token()
+//{
+//	return Token();
+//}
