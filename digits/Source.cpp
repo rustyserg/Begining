@@ -14,62 +14,62 @@
 
 using namespace std;
 
-/*
-int main()
-{
-	cout << "please, enter a value with a floating point:\n";
-	int n;
-	cin >> n;
-	cout << "n == " << n
-		<< "\nn+1 == " << n + 1
-		<< "\nn*3 == " << n * 3
-		<< "\nn+n == " << n + n
-		<< "\nn*n == " << n * n
-		<< "\nn/2 == " << n / 2
-		<< "\nsqrt(n) == " << sqrt(n)
-		<< "\n";
-	keep_window_open();
-	return 0;
-}
-*/
 
-/*
-int main()
-{
-	int i3 = 11;
-	double d1 = i3;
-	double d2 = 21.0;
-	int i4 = d2;
-	int i1 = 10;
-	char c = 'x';
-	bool b1 = c;
-	bool b3 = i1;
-	bool b4 = 10;
-	bool b2 = 'x';
-	int i2 = b3;
-	char c2 = b1;
-	cout << c << b1 << c2 << b2 << "\n" << i1 << b3 << i2 << b4 << "\n" << i3 << d1 << i4 << d2 << "\n";
-	keep_window_open();
-	return 0;
-}
-*/
-/*
-int main()
-{
-	double d = 0;
-	while (cin >> d) {
-		int i = d;
-		char c = i;
-		int i2 = c;
-		cout << " d == " << d
-			<< " i== " << i
-			<< " i2== " << i2
-			<< " char (" << c<< ")\n";
-		keep_window_open();
-		return 0;
-	}
-}
-*/
+//int main()
+//{
+//	cout << "please, enter a value with a floating point:\n";
+//	int n;
+//	cin >> n;
+//	cout << "n == " << n
+//		<< "\nn+1 == " << n + 1
+//		<< "\nn*3 == " << n * 3
+//		<< "\nn+n == " << n + n
+//		<< "\nn*n == " << n * n
+//		<< "\nn/2 == " << n / 2
+//		<< "\nsqrt(n) == " << sqrt(n)
+//		<< "\n";
+//	keep_window_open();
+//	return 0;
+//}
+
+
+
+//int main()
+//{
+//	int i3 = 11;
+//	double d1 = i3;
+//	double d2 = 21.0;
+//	int i4 = d2;
+//	int i1 = 10;
+//	char c = 'x';
+//	bool b1 = c;
+//	bool b3 = i1;
+//	bool b4 = 10;
+//	bool b2 = 'x';
+//	int i2 = b3;
+//	char c2 = b1;
+//	cout << c << b1 << c2 << b2 << "\n" << i1 << b3 << i2 << b4 << "\n" << i3 << d1 << i4 << d2 << "\n";
+//	keep_window_open();
+//	return 0;
+//}
+
+//
+//int main()
+//{
+//	double d = 0;
+//	while (cin >> d) {
+//		int i = d;
+//		char c = i;
+//		int i2 = c;
+//		cout << " d == " << d
+//			<< " i== " << i
+//			<< " i2== " << i2
+//			<< " char (" << c<< ")\n";
+//		system("pause");
+//		return 0;
+//	}
+//}
+
 
 /*
 int main() //2 p.126 DONE
@@ -346,7 +346,7 @@ int main()  //8. page 127 DONE
 //	return 0;
 //}
 
-//int main()  p. 151 DONE
+//int main()  //p. 151 DONE
 //{
 //	char a = 'a';
 //	int i = 97;
@@ -355,7 +355,7 @@ int main()  //8. page 127 DONE
 //		++i;
 //		++a;
 //	}
-//	keep_window_open();
+//	system("pause");
 //	return 0;
 //}
 
@@ -390,7 +390,7 @@ int main()  //8. page 127 DONE
 //		cout << b << '\t' << i << '\n';
 //		++b;
 //	}
-//	keep_window_open();
+//	system("pause");
 //	return 0;
 //}
 
@@ -408,7 +408,7 @@ int main()  //8. page 127 DONE
 //	for (int i = 0; i < 100; ++i) {
 //		cout << i << "\t" << square(i) << "\n";
 //	}
-//	keep_window_open();
+//	system("pause");
 //	return 0;
 //}
 
@@ -501,8 +501,8 @@ int main()  //8. page 127 DONE
 //		temps.push_back(temp);
 //	}
 //	double sum = 0;
-//	double hiqh_temp = -1110;
-//	double low_temp = 1110;
+//	double hiqh_temp = -100;
+//	double low_temp = 60;
 //
 //	const double min_temp = -100;
 //	const double max_temp = 60;
@@ -514,17 +514,17 @@ int main()  //8. page 127 DONE
 //		sum += x;
 //		}
 //		else {
-//			error("WTF !?");
+//			cerr << "WTF !?";
 //		}
 //	}
 //	cout << "Max temp: " << hiqh_temp << "\n";
 //	cout << "Min temp: " << low_temp << "\n";
 //	cout << "Middle temp: " << sum / temps.size() << "\n";
-//	keep_window_open();
+//	system("pause");
 //	return 0;
 //}
 
-//double ctock(double k) {   // p . 214 tasks 1-5 DONE 
+//double ctock(double k) {   // p. 214 tasks 1-5 DONE 
 //	double c = k - 273.15;
 //	if (k < 0) {
 //		cout << "The temperature is below 0K";
@@ -543,7 +543,7 @@ int main()  //8. page 127 DONE
 //	return  0;
 //}
 
-//double from_c_to_f(double c) {   // p . 214 task 6 DONE 
+//double from_c_to_f(double c) {   // p. 214 task 6 DONE 
 //	double f = 9.0/5.0*c + 32; 
 //	if (c < -273.15) {
 //		cout << "The temperature is below -273.15";
@@ -662,12 +662,12 @@ int main()  //8. page 127 DONE
 //	std::vector <int> sequence = {1, 1, 2, 3, 5, 8, 13, 21, 34}; 
 //	for (int x: sequence)
 //	cout << x << "\n";
-//	//auto it = sequence.end();
-//	//it = sequence.insert(it, 0);
-//	sequence.push_back(0);
-//	try //код, который может привести к ошибке, располагается тут
-//	{
-//		for (int i = 9; i < 51; ++i) {
+	////auto it = sequence.end();
+	////it = sequence.insert(it, 0);
+	//sequence.push_back(0);
+	//try //код, который может привести к ошибке, располагается тут
+	//{
+//		for (int i = 9; i < 47; ++i) {
 //			unsigned int error = sequence[i - 1] + sequence[i - 2];
 //			if (error > max_value)
 //			{
@@ -729,10 +729,10 @@ int main()  //8. page 127 DONE
 //	cin >> number;
 //	if (number < 100000) {
 //		int first = number / 10000;
-//		int second = (number % 10000) / 1000;
-//		int third = ((number % 10000) % 1000) / 100;
-//		int fourth = (((number % 10000) % 1000) % 100) / 10;
-//		int fifth = (((number % 10000) % 1000) % 100) % 10;
+//		int second = (number / 1000) %10;
+//		int third = (number / 100) %10;
+//		int fourth = (number / 10) %10;
+//		int fifth = number % 10;
 //
 //		std::cout << "1 digit = " << first << std::endl;
 //		std::cout << "2 digit = " << second << std::endl;
@@ -921,3 +921,48 @@ int main()  //8. page 127 DONE
 //{
 //	return Token();
 //}
+
+//int n, m;		// Functions input, factorial and combination 
+//bool input() {
+//	cout << "enter two numbers:" << endl;
+//	if (!(cin >> n >> m)) {
+//		return false;
+//	}
+//	else if (n < 0 || m < 0) {
+//		return false;
+//		}
+//	else 
+//		return true;
+//}
+//double factorial(int k)
+//{
+//	double result = 1;
+//	for (int i = 1; i <= k; i++) {
+//		result *= i;
+//	}
+//	return result;
+//}
+//double combination() 
+//{
+//	double result;
+//	double numerator = factorial(n);
+//	double denumerator = factorial(n - m)*factorial(m);
+//	result = numerator / denumerator;
+//	return result;
+//}
+//void print(double s) {
+//	cout << "Combination from " << n << " and " << m << " = " << s << endl;
+//}
+//
+//int main() 
+//{
+//	while (!input()) {
+//		system("cls");
+//	}
+//	double s = combination();
+//	print(s);
+//	system("pause");
+//	return 0;
+//}
+//
+
