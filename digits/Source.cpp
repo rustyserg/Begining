@@ -14,7 +14,6 @@
 
 using namespace std;
 
-
 //int main()
 //{
 //	cout << "please, enter a value with a floating point:\n";
@@ -31,8 +30,6 @@ using namespace std;
 //	keep_window_open();
 //	return 0;
 //}
-
-
 
 //int main()
 //{
@@ -69,7 +66,6 @@ using namespace std;
 //		return 0;
 //	}
 //}
-
 
 /*
 int main() //2 p.126 DONE
@@ -187,7 +183,6 @@ int main()  //8. page 127 DONE
 //	return 0;
 //}
 
-
 //int main() //10 page 127-128 DONE
 //{
 //	double div = 0;
@@ -212,7 +207,6 @@ int main()  //8. page 127 DONE
 //	keep_window_open();
 //	return 0;
 //}
-
 
 //int main()  // 11 p.128 DONE
 //{
@@ -359,7 +353,6 @@ int main()  //8. page 127 DONE
 //	return 0;
 //}
 
-
 //// Меняем местами
 //int main() {
 //	int a = 0;
@@ -393,7 +386,6 @@ int main()  //8. page 127 DONE
 //	system("pause");
 //	return 0;
 //}
-
 
 //int square(int x)   // p. 157 DONE
 //{		
@@ -795,7 +787,6 @@ int main()  //8. page 127 DONE
 //	system("pause");
 //	return 0;
 
-
 //int main()		// TEMPERATURES all test cases passed !!!!!!!!!
 //{
 //	vector <int> pos (1);
@@ -813,10 +804,9 @@ int main()  //8. page 127 DONE
 //		if (t > 0) {
 //			pos.push_back(t);
 //		}
-//		else
-//			if (t < 0) {
-//				neg.push_back(t);
-//			}
+//		else if (t < 0) {
+//			neg.push_back(t);
+//		}
 //	}
 //	sort(pos.begin(), pos.end());
 //	sort(neg.rbegin(), neg.rend());
@@ -829,12 +819,11 @@ int main()  //8. page 127 DONE
 //		if (abs(pos[1]) == abs(neg[1])) {
 //		min = pos[1];
 //		}
-//		else 
-//			if (abs(pos[1]) > abs(neg[1])) {
+//		else if (abs(pos[1]) > abs(neg[1])) {
 //			min = neg[1];
 //			}
-//			else {
-//				min = pos[1];
+//		else {
+//			min = pos[1];
 //			}
 //	}
 //	else {
@@ -893,36 +882,7 @@ int main()  //8. page 127 DONE
 //	return 0;
 //}
 
-//class Token {
-//	public:
-//			char kind;
-//			double value;
-//};
-//
-//Token get_token();
-//vector<Token> tok;
-//
-//int main() {
-//	while (cin) {
-//		Token t = get_token();
-//		tok.push_back(t);
-//	}
-//	for (int i = 0; i < tok.size(); i++) {
-//		if (tok[i].kind == '*') {
-//			double d = tok[i - 1].value * tok[i - 2].value;
-//			cout << d << endl;
-//		}
-//	}
-//	system("pause");
-//	return 0;
-//}
-//
-//Token get_token()
-//{
-//	return Token();
-//}
-
-//int n, m;		// Functions input, factorial and combination 
+//int n, m;		// p. 266  task 10 Done (Functions input, factorial and combination)
 //bool input() {
 //	cout << "enter two numbers:" << endl;
 //	if (!(cin >> n >> m)) {
@@ -933,6 +893,11 @@ int main()  //8. page 127 DONE
 //		}
 //	else 
 //		return true;
+//}
+//char variants(char variant) {
+//	cout << "enter two letters c or r" << endl;
+//	cin >> variant;
+//	return variant;
 //}
 //double factorial(int k)
 //{
@@ -950,19 +915,67 @@ int main()  //8. page 127 DONE
 //	result = numerator / denumerator;
 //	return result;
 //}
+//double reshuffle()
+//{
+//	double result;
+//	double numerator = factorial(n);
+//	double denumerator = factorial(n - m);
+//	result = numerator / denumerator;
+//	return result;
+//}
 //void print(double s) {
-//	cout << "Combination from " << n << " and " << m << " = " << s << endl;
+//	if (s == combination()) {
+//		cout << "Combination from " << n << " and " << m << " = " << s << endl;
+//	}
+//	else if(s == reshuffle()) {
+//		cout << "Reshuffle from " << n << " and " << m << " = " << s << endl;
+//	}
 //}
 //
 //int main() 
 //{
+//	char variant = ' ';
+//	double s = 0;
 //	while (!input()) {
 //		system("cls");
 //	}
-//	double s = combination();
-//	print(s);
+//	switch (variants(variant)) {
+//	case 'c': {
+//		s = combination();
+//		print(s);
+//		break;
+//	}
+//	case 'r': {
+//		s = reshuffle();
+//		print(s);
+//		break;
+//	}
+//	default: 
+//		cerr << "There is no right letter" << endl;
+//		break;
+//	}
 //	system("pause");
 //	return 0;
 //}
-//
 
+
+double ABS(double a) {
+	if (a > 0 || a == 0) 
+		return a;
+	else 
+		return -a;
+}
+
+int main()
+{	
+	int g = -23;
+	double result = 1;
+	for (int i = 1; i <= 10; i++) {
+		result *= i;
+	}
+	cout << "factorial = " << result << endl;
+	result = ABS(g);
+	cout << result << endl;
+	system("pause");
+	return 0;
+}
