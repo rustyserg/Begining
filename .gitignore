@@ -22,3 +22,25 @@ bld/
 
 Project1.vcxproj
 Project1.vcxproj.filters
+
+Figure.cpp
+Figure.h
+Fruit.cpp
+Fruit.h
+GameObject.cpp
+GameObject.h
+HorisontLine.cpp
+HorisontLine.h
+OOP Snake.cpp
+OOP Snake.vcxproj
+OOP Snake.vcxproj.filters
+OOP Snake.vcxproj.user
+Snake.cpp
+Snake.h
+SnakeBoard.cpp
+SnakeBoard.h
+VerticalLine.cpp
+VerticalLine.h
+stdafx.cpp
+stdafx.h
+targetve
